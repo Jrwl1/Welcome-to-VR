@@ -1,0 +1,44 @@
+# 1) Ignore absolutely everything by default
+/*
+
+# 2) Then explicitly keep these at the root
+!/.gitignore
+!/README.md
+
+# keep Unity’s essential folders
+!/Assets/
+!/ProjectSettings/
+!/Packages/
+
+# 3) Inside Assets, ignore all subfolders…
+/Assets/*
+
+# …except Scripts and Scenes (and their .meta files)
+!/Assets/Scripts/
+!/Assets/Scripts/**/*.cs
+!/Assets/Scripts/**/*.meta
+
+!/Assets/Scenes/
+!/Assets/Scenes/**/*.unity
+!/Assets/Scenes/**/*.meta
+
+# 4) Prevent any other loose files from sneaking back in
+# (this is redundant now, but safe)
+Library/
+Temp/
+obj/
+Logs/
+UserSettings/
+
+# 5) Wipe out any build outputs or IDE files
+*.apk
+*.exe
+*.app
+*.sln
+*.csproj
+
+# 6) Raw source/art you don’t need in Git
+/DesktopBlenderFiles/
+/backup mat/
+/VRBUILD*    # any folder starting with “VRBUILD”
+/Build*/     # Build or Builds folders
